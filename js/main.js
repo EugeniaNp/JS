@@ -11,7 +11,7 @@ let total = 0;
 let mundo = false;
 
 do{
-    PAQUETE = prompt(` 
+    paquete = prompt(` 
     ¡${nombre}! ¿A donde queres viajar? 
     
     CANCUN
@@ -20,10 +20,10 @@ do{
     `).toUpperCase();
 
     dias = Number(prompt(`
-    ¡${nombre}!, elegiste ${PAQUETE}, ¿cuantos dias?`));
+    ¡${nombre}!, elegiste ${paquete}, ¿cuantos dias?`));
     
 
-    switch (PAQUETE) {
+    switch (paquete) {
         case "CANCUN":
             precio = 100;
             break;
@@ -39,7 +39,7 @@ do{
             break;
     }
    
-    Total += precio * dias;
+    total += precio * dias;
     agregar = confirm("dispones de assist card?");
 
 } while (mundo);
