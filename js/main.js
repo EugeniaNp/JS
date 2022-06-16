@@ -39,7 +39,7 @@ do{
             break;
     }
    
-    total += precio * dias;
+    total = precio * dias;
     agregar = confirm("dispones de assist card?");
 
 } while (mundo);
