@@ -9,7 +9,9 @@ let precio = 0;
 let dias = 0;
 let total = 0;
 let totalIva = 0 ;
+let subIva = 0;
 let mundo = false;
+
 
 do{
     paquete = prompt(` 
@@ -26,7 +28,7 @@ do{
 
     switch (paquete) {
         case "CANCUN":
-            precio = 100;
+            precio = 500;
             break;
 
         case "JAPON":
@@ -40,21 +42,32 @@ do{
             break;
     }
    
+    subIva = dias * precio;
+    
  } while (mundo);
 
 
-const iva = x => x * 0.21;
 
-let subIva = dias * precio;
+alert(`¡${nombre}! tenes disponible un 50% de descuento por ser el cliente N°100`);
 
-let precioIva = multiplicacion (subIva, iva)
+let descuento =50;
 
-console.log(precioIva);
+const suma = (a, b) => a + b ;
+const resta = (a, b) => a - b;
 
+const iva = x => x * 1.21;
+
+let precioFinal = resta (suma (subIva, iva( subIva)),subIva );
 
 
 alert(`
-¡Bienvenido a bordo ${nombre}!`);
+¡Bienvenido a bordo ${nombre}!
+
+El total a pagar por tu vuelo es de $${precioFinal}`
+
+);
+
+
 
 
 
