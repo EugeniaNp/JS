@@ -8,12 +8,12 @@ let paquete = "";
 let precio = 0;
 let dias = 0;
 let total = 0;
-let totalIva = 0 ;
+let totalIva = 0;
 let subIva = 0;
 let mundo = false;
 
 
-do{
+do {
     paquete = prompt(` 
     ¡${nombre}! ¿A donde queres viajar? 
     
@@ -24,7 +24,7 @@ do{
 
     dias = Number(prompt(`
     ¡${nombre}!, elegiste ${paquete}, ¿cuantos dias?`));
-    
+
 
     switch (paquete) {
         case "CANCUN":
@@ -41,35 +41,40 @@ do{
             dias = 0;
             break;
     }
-   
+
     subIva = dias * precio;
-    
- } while (mundo);
+
+} while (mundo);
 
 
 
 alert(`¡${nombre}! tenes disponible un 50% de descuento por ser el cliente N°100`);
 
-let descuento =50;
 
-const suma = (a, b) => a + b ;
+
+const suma = (a, b) => a + b;
 const resta = (a, b) => a - b;
 
-const iva = x => x * 1.21;
+const iva = x => x * 0.21;
+const descuento = x => x * 0.50;
 
-let precioFinal = resta (suma (subIva, iva( subIva)),subIva );
+let precioFinal = suma(subIva, iva(subIva));
+let precioDescuento = resta(precioFinal, descuento(precioFinal));
 
 
 alert(`
 ¡Bienvenido a bordo ${nombre}!
 
-El total a pagar por tu vuelo es de $${precioFinal}`
+El total a pagar por tu vuelo es de $${precioFinal} y al aplicar el descuento del 50% quedaria en $${precioDescuento} UNA LOCURA! `
 
 );
 
+//arrays //
 
+const clientes = [100, 101];
 
+for (let i = 0; i < clientes.length; i++) {
+    alert(clientes[i]);
+}
 
-
-
-
+alert(`¡Promocion finalizada! gracias por celebrar con nosotros!`); 
