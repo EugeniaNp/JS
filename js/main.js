@@ -77,4 +77,19 @@ for (let i = 0; i < clientes.length; i++) {
     alert(clientes[i]);
 }
 
-alert(`¡Promocion finalizada! gracias por celebrar con nosotros!`); 
+alert(`¡Promocion finalizada! gracias por celebrar con nosotros!`);
+
+const alquilerAuto = [
+    {
+        id: 1,
+        marca: "Audi",
+    },
+
+    {
+        id: 2,
+        marca: "BMW",
+    },
+
+];
+
+console.log(alquilerAuto);
