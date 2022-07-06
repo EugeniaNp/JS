@@ -1,6 +1,5 @@
-
+/* 
 // carrito de compra en una seccion "Paquete" landing page de viajes
-
 
 let nombre = prompt("Ingresa tu nombre para continuar: ").toUpperCase();
 
@@ -69,6 +68,7 @@ El total a pagar por tu vuelo es de $${precioFinal} y al aplicar el descuento de
 
 );
 
+
 //arrays //
 
 const clientes = [100, 101];
@@ -79,17 +79,92 @@ for (let i = 0; i < clientes.length; i++) {
 
 alert(`¡Promocion finalizada! gracias por celebrar con nosotros!`);
 
-const alquilerAuto = [
+class Usuario {
+    constructor (nombre, dias, precioFinal){
+        this.nombre = nombre
+        this.dias = dias
+        this.dias = precioFinal
+        
+    }
+}
+
+
+/* const usuario = []
+
+usuario.push (new Usuario(nombre, dias))
+console.log(usuario);
+ */
+
+
+/* const alquilerAuto = [
     {
         id: 1,
         marca: "Audi",
+        precio: 1000,
+
     },
 
     {
         id: 2,
         marca: "BMW",
+        precio: 2000,
+    },
+
+];
+  */
+
+//ejemplo 
+
+//DOM
+
+/* 
+let elemento = document.getElementById ("hola") ;
+let parrafo = document.getElementById ("hola1")
+
+console.log(elemento.innerHTML);
+console.log(parrafo.innerHTML);
+ */
+
+/* let div = document.getElementsByClassName ("cvp") ;
+let p = document.getElementsByClassName ("card-text-1") ;
+
+console.log(div[0].innerHTML);
+console.log(p[0].innerHTML); */
+
+
+let paquetes = [
+    {
+        id: 1,
+        destino: "Cancun",
+        desc: "El paraiso",
+        precio: 500,
+        cantidad: 1,
+        img: './img/cancun.jpg',
+    },
+    {
+        id: 2,
+        destino: "Japon",
+        desc: "Oxidente bello",
+        precio: 400,
+        cantidad: 1,
+        img: './img/japon.jpg',
     },
 
 ];
 
-console.log(alquilerAuto);
+const paquetesDisponibles = () => {
+    const contenedor = document.getElementsByClassName("paquetesDisponibles")
+
+    paquetes.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("card");
+        div.innerHTML = ` <div class="cardImg" > <img src = ${producto.img}></div>
+        `
+
+        contenedor.appendChild(div);
+
+    });
+
+};
+
+paquetesDisponibles();
