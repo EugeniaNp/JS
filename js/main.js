@@ -153,7 +153,8 @@ let paquetes = [
 ];
 
 const paquetesDisponibles = () => {
-    const contenedor = document.getElementsByClassName("paquetesDisponibles")
+    const contenedor = document.getElementById("paquetesDisponibles")
+
 
     paquetes.forEach(producto => {
         const div = document.createElement("div");
@@ -167,4 +168,24 @@ const paquetesDisponibles = () => {
 
 };
 
-paquetesDisponibles();
+paquetesDisponibles(); 
+
+
+//EVENTOS
+
+const boton = document.getElementById ("button");
+
+boton.addEventListener ("click", respuestaClick);
+
+function respuestaClick (){
+    console.log("Hola Hola HOLAAAA!");
+}
+
+const formulario = document.getElementById ("contactoFormulario");
+
+formulario.addEventListener ("submit", validarFormulario);
+
+function validarFormulario (event){
+    event.preventDefault();
+console.log("hello");
+}

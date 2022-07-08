@@ -49,3 +49,20 @@
             border-radius: 5px;
             padding-bottom: 10px;
         } */
+
+
+        
+
+.contactoFormulario {
+            display: flex;
+            box-sizing: border-box;
+            font-family: Baskervville, serif;
+            font-size: 1em;
+            padding: 3.5em;
+            justify-content: space-evenly;
+            padding: 2em;
+            border-top: solid rgb(125, 170, 123);
+            margin: 50px auto;
+        }
+
+        
